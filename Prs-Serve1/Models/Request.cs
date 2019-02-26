@@ -22,11 +22,11 @@ namespace Prs_Serve1.Models
         [Required]
         public DateTime SubmittedDate { get; set; }
         [StringLength(10)]
-        [Required]
-        public string Status { get; set; }
+        //[Required]
+        public string Status { get; set; } = "New";
         [Column(TypeName = "decimal(12, 2)")]
         [Required]
-        public decimal Total { get; set; }
+        public decimal Total { get; set; } = 0;
         [Required]
         public bool Active { get; set; }
 
