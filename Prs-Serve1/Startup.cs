@@ -44,6 +44,7 @@ namespace Prs_Serve1
                 app.UseDeveloperExceptionPage();
             }
 
+            app.UseCors(opt => opt.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod().AllowCredentials());
             app.UseMvc();
         }
     }

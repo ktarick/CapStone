@@ -116,7 +116,7 @@ namespace Prs_Serve1.Controllers
             _context.RequestLines.Remove(requestLine);
             await _context.SaveChangesAsync();
 
-            RecalculateTotal(id);
+            RecalculateTotal(requestLine.RequestId);
 
             return requestLine;
         }

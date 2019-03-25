@@ -152,5 +152,13 @@ namespace Prs_Serve1.Controllers
         {
             return _context.Requests.Any(e => e.Id == id);
         }
+
+        // GET: api/Requests/
+        [HttpGet("/api/Request/review")]
+        public async Task<ActionResult<IEnumerable<Request>>> GetAllRequests()
+        {
+            var request = await _context.Requests.Where(req => req.Status == "Review").ToListAsync(); 
+            return request;
+        }
     }
 }
